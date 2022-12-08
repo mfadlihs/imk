@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Category Filter in JS</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/public_html/assets/css/content.css" />
+		<script
+			src="https://kit.fontawesome.com/dbed6b6114.js"
+			crossorigin="anonymous"></script>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="/public_html/assets/css/Navbar.css" />
+		<link
+			rel="stylesheet"
+			href="assets/vendors/themify-icons/css/themify-icons.css" />
+	</head>
+	<body>
+		<header>
+			<a href="/public_html/index.html" class="logo"
+				><i class="ri-home-heart-fill"></i><span>Logo</span></a
+			>
+			<ul class="navbar">
+				<li><a href="/public_html/index.html">HOME</a></li>
+				<li><a href="/public_html/Content.html">SMP</a></li>
+				<li><a href="#">SMA</a></li>
+				<li><a href="#">UMUM</a></li>
+				<li class="nav-item search">
+					<a
+						href="javascript:void(0)"
+						class="nav-link search-toggle"
+						id="search-content"
+						><i class="ti-search"></i> Search</a
+					>
+					<div class="search-wrapper">
+						<input
+							type="search"
+							class="form-control"
+							name=""
+							placeholder="search your product"
+							onchange="filterSearch()" />
+					</div>
+				</li>
+			</ul>
+
+			<div class="main">
+				<a href="/public_html/login.html" class="user"
+					><i class="ri-user-fill"></i>Sign In</a
+				>
+				<div class="bx bx-menu" id="menu-icon"></div>
+			</div>
+		</header>
+
+		<div class="main-container">
+			<div style="position: relative">
+				<!-- <div
+					style="
+						position: absolute;
+						right: 0;
+						border: 1px solid gray;
+						display: flex;
+						align-items: center;
+						padding: 10px;
+						gap: 10px;
+						border-radius: 10px;
+						box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+					">
+					<i class="ti-search"></i>
+					<input
+						style="outline: none; border: none; width: 250px"
+						placeholder="cari lomba"
+						id="search"
+						onchange="filterSearch()" />
+				</div> -->
+
+				<div>
+					<h2 style="text-align: center; margin-top: 50px">Lomba</h2>
+					<p style="text-align: center"
+						>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut,
+						velit.</p
+					>
+				</div>
+			</div>
+			<div class="filter-container">
+				<div class="category-head">
+					<ul>
+						<div class="category-title active" id="all">
+							<li>All</li>
+							<span><i class="fas fa-border-all"></i></span>
+						</div>
+						<div class="category-title" id="menggambar">
+							<li>GAMBAR</li>
+							<span><i class="fas fa-theater-masks"></i></span>
+						</div>
+						<div class="category-title" id="pidato">
+							<li>PIDATO</li>
+							<span><i class="fas fa-landmark"></i></span>
+						</div>
+						<div class="category-title" id="puisi">
+							<li>PUISI</li>
+							<span><i class="fas fa-chart-area"></i></span>
+						</div>
+						<div class="category-title" id="musik">
+							<li>MUSIK</li>
+							<span><i class="fas fa-coins"></i></span>
+						</div>
+						<div class="category-title" id="olahraga">
+							<li>OLAHRAGA</li>
+							<span><i class="fas fa-running"></i></span>
+						</div>
+					</ul>
+				</div>
+
+				<div class="posts-collect">
+					<div class="posts-main-container">
+						<!-- single post -->
+						<div class="all menggambar">
+							<div class="post-img">
+								<img
+									src="/public_html/assets/imgs/Detail/index.jpg"
+									alt="post" />
+								<span class="category-name">menggambar</span>
+							</div>
+
+							<div class="post-content">
+								<div class="post-content-top">
+									<span><i class="fas fa-calendar"></i>January 01, 2XXX</span>
+									<span> <i class="fas fa-comment"></i>34 </span>
+								</div>
+								<h2>Lorem ipsum dolor sit amet</h2>
+								<p
+									>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Accusamus recusandae aspernatur possimus illum, repellat ad
+									quasi earum, illo voluptatibus minima fugiat saepe magni
+									corporis vero eius accusantium quidem, consectetur
+									nesciunt!</p
+								>
+							</div>
+							<a href="/public_html/Detail.html"
+								><button type="button" class="read-btn">Read All</button></a
+							>
+						</div>
+						<!-- end of single post -->
+						<!-- single post -->
+						<div class="all puisi">
+							<div class="post-img">
+								<img
+									src="/public_html/assets/imgs/Detail/poster.jpg"
+									alt="post" />
+								<span class="category-name">puisi</span>
+							</div>
+
+							<div class="post-content">
+								<div class="post-content-top">
+									<span><i class="fas fa-calendar"></i>January 01, 2XXX</span>
+									<span> <i class="fas fa-comment"></i>34 </span>
+								</div>
+								<h2>Lorem ipsum dolor sit amet</h2>
+								<p
+									>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Accusamus recusandae aspernatur possimus illum, repellat ad
+									quasi earum, illo voluptatibus minima fugiat saepe magni
+									corporis vero eius accusantium quidem, consectetur
+									nesciunt!</p
+								>
+							</div>
+							<button type="button" class="read-btn">Read All</button>
+						</div>
+						<!-- end of single post -->
+						<!-- single post -->
+						<div class="all olahraga">
+							<div class="post-img">
+								<img
+									src="/public_html/assets/imgs/Detail/lari.jpg"
+									alt="post" />
+								<span class="category-name">olahraga</span>
+							</div>
+
+							<div class="post-content">
+								<div class="post-content-top">
+									<span><i class="fas fa-calendar"></i>January 01, 2XXX</span>
+									<span> <i class="fas fa-comment"></i>34 </span>
+								</div>
+								<h2>Lorem ipsum dolor sit amet</h2>
+								<p
+									>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Accusamus recusandae aspernatur possimus illum, repellat ad
+									quasi earum, illo voluptatibus minima fugiat saepe magni
+									corporis vero eius accusantium quidem, consectetur
+									nesciunt!</p
+								>
+							</div>
+							<button type="button" class="read-btn">Read All</button>
+						</div>
+						<!-- end of single post -->
+						<!-- single post -->
+						<div class="all musik">
+							<div class="post-img">
+								<img
+									src="/public_html/assets/imgs/Detail/nyanyi.jpg"
+									alt="post" />
+								<span class="category-name">musik</span>
+							</div>
+
+							<div class="post-content">
+								<div class="post-content-top">
+									<span><i class="fas fa-calendar"></i>January 01, 2XXX</span>
+									<span> <i class="fas fa-comment"></i>34 </span>
+								</div>
+								<h2>Lorem ipsum dolor sit amet</h2>
+								<p
+									>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Accusamus recusandae aspernatur possimus illum, repellat ad
+									quasi earum, illo voluptatibus minima fugiat saepe magni
+									corporis vero eius accusantium quidem, consectetur
+									nesciunt!</p
+								>
+							</div>
+							<button type="button" class="read-btn">Read All</button>
+						</div>
+						<!-- end of single post -->
+						<!-- single post -->
+						<div class="all pidato">
+							<div class="post-img">
+								<img
+									src="/public_html/assets/imgs/Detail/pidato.jpg"
+									alt="post" />
+								<span class="category-name">pidato</span>
+							</div>
+
+							<div class="post-content">
+								<div class="post-content-top">
+									<span><i class="fas fa-calendar"></i>January 01, 2XXX</span>
+									<span> <i class="fas fa-comment"></i>34 </span>
+								</div>
+								<h2>Lorem ipsum dolor sit amet</h2>
+								<p
+									>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Accusamus recusandae aspernatur possimus illum, repellat ad
+									quasi earum, illo voluptatibus minima fugiat saepe magni
+									corporis vero eius accusantium quidem, consectetur
+									nesciunt!</p
+								>
+							</div>
+							<a href="/public_html/Detail2.html"
+								><button type="button" class="read-btn">Read All</button></a
+							>
+						</div>
+						<!-- end of single post -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- JS file -->
+		<script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+
+		<script src="/public_html/assets/js/script.js"></script>
+		<script src="/public_html/assets/js/navbar.js"></script>
+	</body>
+</html>
