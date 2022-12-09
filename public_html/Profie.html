@@ -67,7 +67,9 @@
 									<h6 class="f-w-600">Bagas Antarino</h6>
 									<p>Web Designer</p>
 									<i
-										class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+										class="mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"
+										style="cursor: pointer"
+										onclick="toggleEdit()"></i>
 								</div>
 							</div>
 							<div class="col-sm-8">
@@ -76,11 +78,19 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<p class="m-b-10 f-w-600">Email</p>
-											<h6 class="text-muted f-w-400">bagas@gmail.com</h6>
+											<input
+												value="bagas@gmail.com"
+												disabled
+												class="change-field text-muted"
+												id="email" />
 										</div>
 										<div class="col-sm-6">
 											<p class="m-b-10 f-w-600">Phone</p>
-											<h6 class="text-muted f-w-400">98979989898</h6>
+											<input
+												value="98979989898"
+												disabled
+												class="change-field text-muted"
+												id="phone" />
 										</div>
 									</div>
 									<h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600"
@@ -89,11 +99,19 @@
 									<div class="row">
 										<div class="col-sm-6">
 											<p class="m-b-10 f-w-600">Recent</p>
-											<h6 class="text-muted f-w-400">Lomba Gambar</h6>
+											<input
+												value="Lomba Gambar"
+												disabled
+												class="change-field text-muted"
+												id="recent" />
 										</div>
 										<div class="col-sm-6">
 											<p class="m-b-10 f-w-600">Most Viewed</p>
-											<h6 class="text-muted f-w-400">Pidato</h6>
+											<input
+												value="Pidato"
+												disabled
+												class="change-field text-muted"
+												id="most" />
 										</div>
 									</div>
 									<ul class="social-link list-unstyled m-t-40 m-b-10">
@@ -144,5 +162,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="./assets/js/profile.js"></script>
 	</body>
 </html>
